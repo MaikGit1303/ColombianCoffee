@@ -19,34 +19,85 @@
 La estructura del repositorio está organizada de la siguiente manera:
 
 ```bash
-ColombianCoffee/
-├── ColombianCoffee.csproj
-├── Docs/
-├── Program.cs
-└── Src/
-    ├── Features/
-    │   ├── Auth/
-    │   │   ├── Contracts/        
-    │   │   ├── Domain/           
-    │   │   ├── Services/        
-    │   │   ├── Infrastructure/   
-    │   │   └── Presentation/     
-    │   ├── Varieties/
-    │   │   ├── Contracts/
-    │   │   ├── Domain/
-    │   │   ├── Services/
-    │   │   ├── Infrastructure/
-    │   │   └── Presentation/
-    │   └── Reports/             
-    │       ├── Contracts/
-    │       ├── Domain/
-    │       ├── Services/
-    │       ├── Infrastructure/
-    │       └── Presentation/
-    └── Shared/
-        ├── Common/              
-        ├── Persistence/         
-        └── Models/              
+Coffee/
+├── src/
+│   ├── Modules/
+│   │   ├── Cities/
+│   │   │   ├── Application/
+│   │   │   │   ├── Interfaces/
+│   │   │   │   │   ├── ICityRepository.cs
+│   │   │   │   │   └── ICityService.cs
+│   │   │   │   └── Services/
+│   │   │   │       └── CityService.cs
+│   │   │   ├── Domain/
+│   │   │   │   └── Entities/
+│   │   │   │       └── City.cs
+│   │   │   ├── Infrastructure/
+│   │   │   │   └── Repositories/
+│   │   │   │       └── CityRepository.cs
+│   │   │   └── UI/
+│   │   │       └── CityMenu.cs
+│   │   ├── Countries/
+│   │   │   ├── Application/
+│   │   │   │   ├── Interfaces/
+│   │   │   │   │   ├── ICountryRepository.cs
+│   │   │   │   │   └── ICountryService.cs
+│   │   │   │   └── Services/
+│   │   │   │       └── CountryService.cs
+│   │   │   ├── Domain/
+│   │   │   │   └── Entities/
+│   │   │   │       └── Country.cs
+│   │   │   ├── Infrastructure/
+│   │   │   │   └── Repositories/
+│   │   │   │       └── CountryRepository.cs
+│   │   │   └── UI/
+│   │   │       └── CountryMenu.cs
+│   │   ├── Regions/
+│   │   │   ├── Application/
+│   │   │   │   ├── Interfaces/
+│   │   │   │   │   ├── IRegionRepository.cs
+│   │   │   │   │   └── IRegionService.cs
+│   │   │   │   └── Services/
+│   │   │   │       └── RegionService.cs
+│   │   │   ├── Domain/
+│   │   │   │   └── Entities/
+│   │   │   │       └── Region.cs
+│   │   │   ├── Infrastructure/
+│   │   │   │   └── Repositories/
+│   │   │   │       └── RegionRepository.cs
+│   │   │   └── UI/
+│   │   │       └── RegionMenu.cs
+│   │   └── Users/
+│   │       ├── Application/
+│   │       │   ├── Interfaces/
+│   │       │   │   ├── IUserRepository.cs
+│   │       │   │   └── IUserService.cs
+│   │       │   └── Services/
+│   │       │       └── UserService.cs
+│   │       ├── Domain/
+│   │       │   └── Entities/
+│   │       │       └── User.cs
+│   │       ├── Infrastructure/
+│   │       │   └── Repositories/
+│   │       │       └── UserRepository.cs
+│   │       └── UI/
+│   │           └── UserMenu.cs
+│   └── Shared/
+│       ├── Configurations/
+│       │   ├── CityConfiguration.cs
+│       │   ├── CountryConfiguration.cs
+│       │   ├── RegionConfiguration.cs
+│       │   └── UserConfiguration.cs
+│       ├── Context/
+│       │   └── AppDbContext.cs
+│       ├── Helpers/
+│       │   ├── DbContextFactory.cs
+│       │   └── MySqlVersionResolver.cs
+│       └── UI/
+│           └── Menu.cs
+├── appsettings.json
+├── Coffee.csproj
+└── Program.cs             
 ```
 
 ## 🛠️ Tecnologías Utilizadas
